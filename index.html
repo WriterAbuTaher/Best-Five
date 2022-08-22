@@ -10,11 +10,11 @@
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
-<body>
+<body class="bg-gray-700">
     <section class="w-11/12 mx-auto">
         <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
             <div>
-                <div class="card w-96 bg-base-100 shadow-xl">
+                <div class="card w-full bg-base-100 shadow-xl">
                     <figure class="px-10 pt-10">
                         <img src="./images/mustafiz.jpg" alt="mustafiz" class="rounded-xl" />
                     </figure>
@@ -22,13 +22,13 @@
                         <h2 class="card-title">Mustafiz</h2>
                         <p>Test 82 🏏 T-20 31</p>
                         <div class="card-actions">
-                            <button class="btn btn-primary">Select</button>
+                            <button onclick="selectedElement(this)" class="btn btn-primary">Select</button>
                         </div>
                     </div>
                 </div>
             </div>
             <div>
-                <div class="card w-96 bg-base-100 shadow-xl">
+                <div class="card w-full bg-base-100 shadow-xl">
                     <figure class="px-10 pt-10 w">
                         <img src="./images/taskin.jpg" alt="taskin" class="rounded-xl" />
                     </figure>
@@ -36,13 +36,13 @@
                         <h2 class="card-title">Taskin</h2>
                         <p>Test 95 🏏 ODI 43</p>
                         <div class="card-actions">
-                            <button class="btn btn-primary">Select</button>
+                            <button onclick="selectedElement(this)" class="btn btn-primary">Select</button>
                         </div>
                     </div>
                 </div>
             </div>
             <div>
-                <div class="card w-96 bg-base-100 shadow-xl">
+                <div class="card w-full bg-base-100 shadow-xl">
                     <figure class="px-10 pt-10">
                         <img src="./images/ashraful.jpg" alt="ashraful" class="rounded-xl" />
                     </figure>
@@ -50,14 +50,14 @@
                         <h2 class="card-title">Ashraful</h2>
                         <p>Match 178 🏏 Run 3468</p>
                         <div class="card-actions">
-                            <button class="btn btn-primary">Select</button>
+                            <button onclick="selectedElement(this)" class="btn btn-primary">Select</button>
                         </div>
                     </div>
                 </div>
             </div>
             <div class="order-2 md:order-none">
-                <div class="card w-96 bg-base-100 shadow-xl">
-                    <h2 class="text-5xl text-center mt-6">Selected 5</h2>
+                <div class="card w-full bg-base-100 shadow-xl">
+                    <h2 class="text-5xl text-center mt-2 mb-2">Selected 5</h2>
                     <div class="overflow-x-auto">
                         <table class="table table-zebra w-full text-center">
                             <thead>
@@ -66,15 +66,15 @@
                                     <th>Name</th>
                                 </tr>
                             </thead>
-                            <tbody>
-
+                            <tbody id="tBody">
+                                
                             </tbody>
                         </table>
                     </div>
                 </div>
             </div>
             <div>
-                <div class="card w-96 bg-base-100 shadow-xl">
+                <div class="card w-full bg-base-100 shadow-xl">
                     <figure class="px-10 pt-10">
                         <img src="./images/liton.jpg" alt="liton" class="rounded-xl" />
                     </figure>
@@ -82,13 +82,13 @@
                         <h2 class="card-title">Liton</h2>
                         <p>Match 54 🏏 Run 1081</p>
                         <div class="card-actions">
-                            <button class="btn btn-primary">Select</button>
+                            <button onclick="selectedElement(this)" class="btn btn-primary">Select</button>
                         </div>
                     </div>
                 </div>
             </div>
             <div>
-                <div class="card w-96 bg-base-100 shadow-xl">
+                <div class="card w-full bg-base-100 shadow-xl">
                     <figure class="px-10 pt-10">
                         <img src="./images/imrul.jpg" alt="imrul" class="rounded-xl" />
                     </figure>
@@ -96,13 +96,13 @@
                         <h2 class="card-title">Imrul</h2>
                         <p>Test 1797 🏏 ODI 2434</p>
                         <div class="card-actions">
-                            <button class="btn btn-primary">Select</button>
+                            <button onclick="selectedElement(this)" class="btn btn-primary">Select</button>
                         </div>
                     </div>
                 </div>
             </div>
             <div>
-                <div class="card w-96 bg-base-100 shadow-xl">
+                <div class="card w-full bg-base-100 shadow-xl">
                     <figure class="px-10 pt-10">
                         <img src="./images/mahmudullah.jpg" alt="mahmudullah" class="rounded-xl" />
                     </figure>
@@ -110,13 +110,13 @@
                         <h2 class="card-title">Mahmudullah</h2>
                         <p>Match 212 🏏 Run 4768</p>
                         <div class="card-actions">
-                            <button class="btn btn-primary">Select</button>
+                            <button onclick="selectedElement(this)" class="btn btn-primary">Select</button>
                         </div>
                     </div>
                 </div>
             </div>
             <div>
-                <div class="card w-96 bg-base-100 shadow-xl">
+                <div class="card w-full bg-base-100 shadow-xl">
                     <figure class="px-10 pt-10">
                         <img src="https://placeimg.com/400/225/arch" alt="Shoes" class="rounded-xl" />
                     </figure>
@@ -130,7 +130,7 @@
                 </div>
             </div>
             <div>
-                <div class="card w-96 bg-base-100 shadow-xl">
+                <div class="card w-full bg-base-100 shadow-xl">
                     <figure class="px-10 pt-10">
                         <img src="./images/mashrafi.jpg" alt="mashrafi" class="rounded-xl" />
                     </figure>
@@ -138,13 +138,13 @@
                         <h2 class="card-title">Mashrafe</h2>
                         <p>Match 220 🏏 ODI 270</p>
                         <div class="card-actions">
-                            <button class="btn btn-primary">Select</button>
+                            <button onclick="selectedElement(this)" class="btn btn-primary">Select</button>
                         </div>
                     </div>
                 </div>
             </div>
             <div>
-                <div class="card w-96 bg-base-100 shadow-xl">
+                <div class="card w-full bg-base-100 shadow-xl">
                     <figure class="px-10 pt-10">
                         <img src="./images/mushfiq.jpg" alt="mushfiq" class="rounded-xl" />
                     </figure>
@@ -152,13 +152,13 @@
                         <h2 class="card-title">Mushfiq</h2>
                         <p>Match 236 🏏 Run 6774</p>
                         <div class="card-actions">
-                            <button class="btn btn-primary">Select</button>
+                            <button onclick="selectedElement(this)" class="btn btn-primary">Select</button>
                         </div>
                     </div>
                 </div>
             </div>
             <div>
-                <div class="card w-96 bg-base-100 shadow-xl">
+                <div class="card w-full bg-base-100 shadow-xl">
                     <figure class="px-10 pt-10">
                         <img src="./images/shakib.jpg" alt="shakib" class="rounded-xl" />
                     </figure>
@@ -166,13 +166,15 @@
                         <h2 class="card-title">Shakib</h2>
                         <p>Match 221 🏏 Run 8401</p>
                         <div class="card-actions">
-                            <button class="btn btn-primary">Select</button>
+                            <button onclick="selectedElement(this)" class="btn btn-primary">Select</button>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
+
+    <script src="/app.js"></script>
 </body>
 
 </html>
