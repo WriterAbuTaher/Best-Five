@@ -1,5 +1,6 @@
 let count = 1;
 
+// seleceted function 
 function selectedElement(element) {
     const playerName = element.parentNode.parentNode.children[0].innerText;
     
@@ -9,23 +10,23 @@ function selectedElement(element) {
     playerNo.innerText = count;
     newRow.appendChild(playerNo);
     
-    let newPlayer = document.createElement("th");
+    const newPlayer = document.createElement("th");
     newPlayer.innerText = playerName;
     newRow.appendChild(newPlayer);
-
-    const tBody = document.getElementById("tBody");
-
+    
+    const tableBody = document.getElementById("table-body");
+    
     if (count <= 5) {
-        tBody.appendChild(newRow);
+        tableBody.appendChild(newRow);
         count++
     }
     else {
         return alert("You Already Added 5 Players")
     }
-
-    const btnHide = element.parentNode;
-    btnHide.style.display = "none";
-
+    
+    const btnNone = element.parentNode;
+    btnNone.style.display = "none";
+    
     const card = element.parentNode.parentNode;
     const NewBtn = document.createElement("button");
     NewBtn.classList.add("btn")
@@ -33,4 +34,26 @@ function selectedElement(element) {
     NewBtn.innerText = "Select";
     card.appendChild(NewBtn);
 }
+
+// common function 
+function inputField(inputId) {
+    const inputValue = document.getElementById(inputId);
+    const inputFieldValue = parseFloat(inputValue.value);
+    return inputFieldValue;
+}
+
+// calculate function 
+document.getElementById("calculate-btn").addEventListener("click", function () {
+    const tableBody = document.getElementById("table-body");
+    const playerNo = parseFloat(tableBody.lastChild.children[0].innerText);
+    
+    const playerBubget = inputField("player-budget");
+    
+    const calculate = playerNo * playerBubget;
+    console.log(calculate);
+
+    const expenses = document.getElementById("expenses").innerText = calculate;
+})
+
+// calculate total function
 
