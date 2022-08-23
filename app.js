@@ -26,7 +26,6 @@ function selectedElement(element) {
 
     const btnNone = element;
     btnNone.setAttribute("disabled", true);
-    console.log(btnNone);
 }
 
 // common function 
