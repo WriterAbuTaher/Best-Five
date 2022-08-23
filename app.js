@@ -47,13 +47,16 @@ document.getElementById("calculate-btn").addEventListener("click", function () {
     const tableBody = document.getElementById("table-body");
     const playerNo = parseFloat(tableBody.lastChild.children[0].innerText);
     
-    const playerBubget = inputField("player-budget");
-    
-    const calculate = playerNo * playerBubget;
-    console.log(calculate);
+    const calculate = playerNo * inputField("player-budget");
 
-    const expenses = document.getElementById("expenses").innerText = calculate;
+    document.getElementById("expenses").innerText = calculate;
 })
 
 // calculate total function
+document.getElementById("calculate-total-btn").addEventListener("click", function () {
+    const expenses = parseFloat(document.getElementById("expenses").innerText);
+    
+    const calculateTotal = expenses + inputField("manager-value") + inputField("coach-value");
 
+    document.getElementById("total").innerText = calculateTotal;
+})
