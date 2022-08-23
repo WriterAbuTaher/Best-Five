@@ -39,17 +39,32 @@ function inputField(inputId) {
 document.getElementById("calculate-btn").addEventListener("click", function () {
     const tableBody = document.getElementById("table-body");
     const playerNo = parseFloat(tableBody.lastChild.children[0].innerText);
+    const budgetValue = inputField("player-budget");
 
-    const calculate = playerNo * inputField("player-budget");
+    const calculate = playerNo * budgetValue;
 
-    document.getElementById("expenses").innerText = calculate;
+    // error message 
+    if (isNaN(budgetValue) == true) {
+        alert("Please Insert A Number")
+    }
+    else {
+        document.getElementById("expenses").innerText = calculate;
+    }
 })
 
 // calculate total function
 document.getElementById("calculate-total-btn").addEventListener("click", function () {
     const expenses = parseFloat(document.getElementById("expenses").innerText);
+    const managerValue = inputField("manager-value");
+    const coachValue = inputField("coach-value")
 
-    const calculateTotal = expenses + inputField("manager-value") + inputField("coach-value");
-
-    document.getElementById("total").innerText = calculateTotal;
+    const calculateTotal = expenses + managerValue  + coachValue;
+    
+    // error message
+    if (isNaN(managerValue) == true || isNaN(coachValue) == true) {
+        alert ("Please Insert A Number")
+    }
+    else {
+        document.getElementById("total").innerText = calculateTotal;
+    }
 })
