@@ -3,19 +3,19 @@ let count = 1;
 // seleceted function 
 function selectedElement(element) {
     const playerName = element.parentNode.parentNode.children[0].innerText;
-    
+
     const newRow = document.createElement("tr");
-    
+
     const playerNo = document.createElement("th");
     playerNo.innerText = count;
     newRow.appendChild(playerNo);
-    
+
     const newPlayer = document.createElement("th");
     newPlayer.innerText = playerName;
     newRow.appendChild(newPlayer);
-    
+
     const tableBody = document.getElementById("table-body");
-    
+
     if (count <= 5) {
         tableBody.appendChild(newRow);
         count++
@@ -23,16 +23,10 @@ function selectedElement(element) {
     else {
         return alert("You Already Added 5 Players")
     }
-    
-    const btnNone = element.parentNode;
-    btnNone.style.display = "none";
-    
-    const card = element.parentNode.parentNode;
-    const NewBtn = document.createElement("button");
-    NewBtn.classList.add("btn")
-    NewBtn.classList.add("btn-disable")
-    NewBtn.innerText = "Select";
-    card.appendChild(NewBtn);
+
+    const btnNone = element;
+    btnNone.setAttribute("disabled", true);
+    console.log(btnNone);
 }
 
 // common function 
@@ -46,7 +40,7 @@ function inputField(inputId) {
 document.getElementById("calculate-btn").addEventListener("click", function () {
     const tableBody = document.getElementById("table-body");
     const playerNo = parseFloat(tableBody.lastChild.children[0].innerText);
-    
+
     const calculate = playerNo * inputField("player-budget");
 
     document.getElementById("expenses").innerText = calculate;
@@ -55,7 +49,7 @@ document.getElementById("calculate-btn").addEventListener("click", function () {
 // calculate total function
 document.getElementById("calculate-total-btn").addEventListener("click", function () {
     const expenses = parseFloat(document.getElementById("expenses").innerText);
-    
+
     const calculateTotal = expenses + inputField("manager-value") + inputField("coach-value");
 
     document.getElementById("total").innerText = calculateTotal;
